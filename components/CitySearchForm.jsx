@@ -1,9 +1,8 @@
 import React from 'react'
 
-function CitySearchForm({ airQualityData, setAirQualityData }) {
+function CitySearchForm({ airQualityData, setAirQualityData, getAirQualityData }) {
   const [inputValue, setInputValue] = React.useState("")
-
-  console.log(inputValue)
+  // console.log(inputValue)
   
   function handleInputChange(event) { 
     const { name, value } = event.target
@@ -12,7 +11,8 @@ function CitySearchForm({ airQualityData, setAirQualityData }) {
   
   function handleSearch(event) {
     event.preventDefault()
-    const { value } = event.target
+    const formattedCity = inputValue.replace(/ /g, '-')
+    getAirQualityData(formattedCity)
     console.log("Form submitted")
   }
 
@@ -23,13 +23,15 @@ function CitySearchForm({ airQualityData, setAirQualityData }) {
 
   return (
     <div>
-      <h3>Henlo</h3>
-      <form action="" onSubmit={handleSearch} id='citySearchForm'>
+      <h3>Air Quality Index Checker</h3>
+      <form
+        onSubmit={handleSearch}
+        id='citySearchForm'
+      >
         <input
           type="text"
           placeholder='Enter City'
           onChange={handleInputChange}
-
         />
         <button type='submit'>Search</button>
       </form>
