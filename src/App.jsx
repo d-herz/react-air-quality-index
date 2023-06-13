@@ -1,6 +1,7 @@
 import React from 'react' 
 import './App.css'
 import CitySearchForm from '../components/CitySearchForm'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
 
@@ -25,7 +26,11 @@ function App() {
 
     } catch (error) {
       console.error("network error:", error)
-      setError("Something went wrong!")
+      if (!airQualityData) {
+        setError("Please Enter a Location")
+      } else {
+        setError("Something went wrong!")
+      }
       setAirQualityData(null)
     }
 
@@ -37,13 +42,30 @@ function App() {
   },[])
 
   return (
-    <div>
-      {/* <h1>Air Quality Index Checker</h1> */}
+    <div
+      className='container'
+    >
+      <h1
+        className='mt-5 mb-3'
+      >
+        Air Quality Index Checker</h1>
       <CitySearchForm
         airQualityData={airQualityData}
         setAirQualityData={setAirQualityData}
         getAirQualityData={getAirQualityData}
       />
+      {error && (
+        <div
+          className="alert alert-danger"
+        >
+          {error}
+        </div>
+      )}
+      {airQualityData && (
+        <>
+
+        </>
+      )}
     </div>
     
   )

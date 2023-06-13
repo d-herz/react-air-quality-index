@@ -23,19 +23,31 @@ function CitySearchForm({ airQualityData, setAirQualityData, getAirQualityData }
 
   return (
     <div>
-      <h3>Air Quality Index Checker</h3>
+      {/* <h3>Air Quality Index Checker</h3> */}
       <form
+        className='mb-4'
         onSubmit={handleSearch}
         id='citySearchForm'
       >
         <input
+          className='form-control'
           type="text"
           placeholder='Enter City'
           onChange={handleInputChange}
         />
-        <button type='submit'>Search</button>
+        <button
+          className='btn btn-primary mt-3'
+          type='submit'
+        >
+          Search
+        </button>
       </form>
-        <button onClick={clearForm}>Clear Form</button>
+      <button
+        className='btn btn-primary mt-0'
+        onClick={clearForm}
+      >
+        Clear Form
+      </button>
     </div>
   )
 }
