@@ -39,7 +39,8 @@ function App() {
     <div>
       <h1>Air Quality Index Checker</h1>
       <CitySearchForm
-        getAirQualityData = {getAirQualityData}
+        airQualityData={airQualityData}
+        setAirQualityData={setAirQualityData}
       />
     </div>
     
