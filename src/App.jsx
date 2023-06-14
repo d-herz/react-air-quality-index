@@ -72,9 +72,12 @@ function App() {
           <PollutantInfo
             pollutant={airQualityData.dominentpol}
           />
-          <AirQualityLevels />
         </>
       )}
+      <AirQualityLevels />
+      <p>
+        Location-sepcific API data sourced from the <a href=" https://aqicn.org/api/">World Air Quality Index Project</a>
+      </p>
     </div>
     
   )
