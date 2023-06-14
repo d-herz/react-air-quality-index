@@ -19,6 +19,7 @@ function CitySearchForm({ airQualityData, setAirQualityData, getAirQualityData }
   function clearForm() {
     document.getElementById("citySearchForm").reset()
     setInputValue("")
+    getAirQualityData("here")
   }
 
   return (

@@ -1,8 +1,9 @@
 import React from 'react' 
-import './App.css'
 import CitySearchForm from '../components/CitySearchForm'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import AirQualityCard from '../components/AirQualityCard'
+import PollutantInfo from '../components/PollutantInfo'
+import './App.css'
 
 function App() {
 
@@ -66,6 +67,9 @@ function App() {
         <>
           <AirQualityCard
             data={airQualityData}
+          />
+          <PollutantInfo
+            pollutant={airQualityData.dominentpol}
           />
         </>
       )}
