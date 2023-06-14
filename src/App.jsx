@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css'
 import CitySearchForm from '../components/CitySearchForm'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import AirQualityCard from '../components/AirQualityCard'
 
 function App() {
 
@@ -63,7 +64,9 @@ function App() {
       )}
       {airQualityData && (
         <>
-
+          <AirQualityCard
+            data={airQualityData}
+          />
         </>
       )}
     </div>
