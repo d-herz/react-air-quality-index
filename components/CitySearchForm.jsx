@@ -27,7 +27,7 @@ function CitySearchForm({ airQualityData, setAirQualityData, getAirQualityData }
       className='form-div'
     >
       <form
-        className='mb-2'
+        className='mb-2 city-search-form'
         onSubmit={handleSearch}
         id='citySearchForm'
       >
