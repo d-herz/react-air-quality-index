@@ -9,3 +9,14 @@
 .bg-hazardous {
   background-color: #7E0023;
 }
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.form-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
