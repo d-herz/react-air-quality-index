@@ -24,7 +24,7 @@ function PollutantInfo({pollutant}) {
   
   return (
     <div
-      className='card mb-4'    
+      className='card mb-4 pollutant-card'    
     >
       <div
         className='card-body'

@@ -46,12 +46,13 @@ function App() {
 
   return (
     <div
-      className='container'
+      className='container text-center'
     >
       <h1
-        className='mt-5 mb-3'
+        className='mt-5 mb-3 mx-auto page-title'
       >
-        Air Quality Index Checker</h1>
+        Air Quality Index Checker
+      </h1>
       <CitySearchForm
         airQualityData={airQualityData}
         setAirQualityData={setAirQualityData}

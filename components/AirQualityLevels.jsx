@@ -13,7 +13,7 @@ function AirQualityLevels() {
 
   return (
     <div
-      className='card mb-4'
+      className='card mb-4 aiq-levels-card'
     >
       <div
         className='card-body'

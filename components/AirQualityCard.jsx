@@ -24,7 +24,7 @@ function AirQualityCard({ data }) {
 
   return (
     <div
-      className={`card mt-2 mb-4 ${cardColor}`}
+      className={`card mt-2 mb-4 ${cardColor} aiq-card`}
     >
       <div
         className='card-body'
