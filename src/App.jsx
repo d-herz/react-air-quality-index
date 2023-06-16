@@ -76,8 +76,11 @@ function App() {
         </>
       )}
       <AirQualityLevels />
-      <p>
+      <p className='mb-0'>
         Location-sepcific API data sourced from the <a href=" https://aqicn.org/api/">World Air Quality Index Project</a>
+      </p>
+      <p>
+        <a href="https://WebDevDan.com">WebDevDan</a>
       </p>
     </div>
     
